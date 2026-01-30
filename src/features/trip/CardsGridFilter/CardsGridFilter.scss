@@ -4,11 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   margin-left: 1rem;
 
   @media (max-width: 464px) {
-    //flex-direction: column;
     display: flex;
     flex-direction: column;
     justify-content: center;
