@@ -7,14 +7,13 @@ import { CardModalContent } from "../../features/trip/CardModalContent/CardModal
 import useDebounce from "../../hooks/useDebounce";
 import { useFilteredTrips } from "../../hooks/useFiltered";
 import { CardsGridFilters } from "../../features/trip/CardsGridFilter/CardsGridFilter";
+import "./CardList.scss";
 
 export function CardsList() {
   const { data: trips = [], isLoading, isError } = useTrips();
   const [selectedTrip, setSelectedTrip] = useState<Trip | null>(null);
   const [searchCard, setSearchCard] = useState("");
-  const [sortDirection, setSortDirection] = useState<"asc" | "desc" | null>(
-    null,
-  );
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("desc");
 
   const debouncedSearch = useDebounce(searchCard, 500);
   const filteredTrips = useFilteredTrips({
@@ -34,7 +33,7 @@ export function CardsList() {
     return (
       <div className="error-container">
         <div className="error-icon">⚠️</div>
-        <div className="error-message">Error loading trips</div>
+        <div>Error loading trips</div>
       </div>
     );
   }

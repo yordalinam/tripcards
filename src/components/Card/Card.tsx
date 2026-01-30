@@ -11,10 +11,12 @@ export function Card({ trip, onMoreInfo }: CardProps) {
   return (
     <div className="card">
       <img src={trip.image} alt={trip.name} />
-      <h3>{trip.name}</h3>
-      <div className="rating">★{"★".repeat(Math.floor(trip.rating - 1))}</div>
-      <p>{trip.description}</p>
-      <Button onClick={onMoreInfo}>More Info</Button>{" "}
+      <div className="card-content">
+        <span>{trip.name}</span>
+        <div className="rating">{"★".repeat(Math.floor(trip.rating))}</div>
+        <p>{trip.description}</p>
+        <Button onClick={onMoreInfo}>More Info</Button>
+      </div>
     </div>
   );
 }

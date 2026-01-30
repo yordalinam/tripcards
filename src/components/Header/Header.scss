@@ -1,0 +1,20 @@
+@use "../../styles/variables" as v;
+
+.header {
+  background: linear-gradient(135deg, v.$purple-main, v.$dark-blue);
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    color: v.$purple-light;
+    font-weight: v.$large-font-weight;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 464px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

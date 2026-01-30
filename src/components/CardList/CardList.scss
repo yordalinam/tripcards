@@ -1,0 +1,19 @@
+@use "../../styles/variables" as v;
+
+.loading-container,
+.error-container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  font-size: v.$large-font-size;
+  color: v.$purple-dark;
+  font-weight: v.$normal-font-weight;
+}
+
+.error-icon {
+  font-size: v.$largest-font-size;
+}

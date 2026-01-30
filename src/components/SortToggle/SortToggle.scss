@@ -1,18 +1,32 @@
+@use "../../styles/variables" as v;
+
+.sort-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .sort-toggle {
-  background: hsl(59, 100%, 66%);
-  border: yellow;
-  padding: 8px 12px;
-  border-radius: 6px;
+  background: v.$purple-main;
+  border: 1px solid v.$purple-light;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: v.$medium-font-size;
+  display: inline-flex;
+  align-items: center;
+  font-weight: v.$normal-font-weight;
 
   &.asc {
-    background: #e3f2fd;
-    border-color: #2196f3;
+    background: v.$purple-light;
+    color: v.$purple-main;
+    border-color: v.$purple-main;
   }
 
   &.desc {
-    background: #fff3e0;
-    border-color: #ff9800;
+    background: v.$purple-main;
+    color: v.$purple-light;
+    border-color: v.$purple-light;
   }
 }

@@ -1,0 +1,51 @@
+@use "../../styles/variables" as v;
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 18rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 1px solid v.$purple-main;
+  border-radius: 10px;
+  font-size: v.$medium-font-size;
+  background: v.$purple-light;
+  color: v.$purple-dark;
+  outline: none;
+
+  &::placeholder {
+    color: v.$purple-dark;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    background: v.$purple-main;
+    border: none;
+  }
+}
+
+.clear-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: v.$purple-light;
+  color: v.$purple-dark;
+  font-size: v.$medium-font-size;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: v.$purple-dark;
+    color: v.$purple-light;
+  }
+}

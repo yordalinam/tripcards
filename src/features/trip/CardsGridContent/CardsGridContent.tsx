@@ -1,5 +1,6 @@
 import type { Trip } from "../../../api/types/type";
 import { Card } from "../../../components/Card/Card";
+import "./CardsGridContent.scss";
 
 interface CardsGridContentProps {
   trips: Trip[];

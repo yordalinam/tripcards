@@ -1,11 +1,11 @@
-import "./App.scss";
 import { CardsList } from "./components/CardList/CardList";
+import { Header } from "./components/Header/Header";
 
 function App() {
   return (
     <>
-      <h1>Trip Card Explorer</h1>
-      <CardsList />
+      <Header />
+      <CardsList />;
     </>
   );
 }

@@ -11,6 +11,8 @@ export const CardModalContent = ({ trip }: TripModalContentProps) => (
     </div>
     <h2>{trip.name}</h2>
     <div className="rating">★{"★".repeat(Math.floor(trip.rating - 1))}</div>
-    <p>{trip.long_description}</p>
+    <div className="modal-body">
+      <p>{trip.long_description}</p>
+    </div>
   </>
 );

@@ -20,14 +20,19 @@ export function FilterInput({ onFilterChange }: FilterInputProps) {
   };
 
   return (
-    <div>
+    <div className="input-container">
       <input
+        className="input"
         type="text"
         placeholder="Search trips..."
         value={searchTerm}
         onChange={handleChange}
       />
-      {searchTerm && <button onClick={handleClear}>Clear</button>}
+      {searchTerm && (
+        <button className="clear-btn" onClick={handleClear}>
+          ×
+        </button>
+      )}
     </div>
   );
 }

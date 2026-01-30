@@ -15,7 +15,7 @@ export const useFilteredTrips = ({
   sortDirection,
 }: UseFilteredTripsProps) => {
   return useMemo(() => {
-    let result = trips.filter((trip) =>
+    const result = trips.filter((trip) =>
       trip.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 

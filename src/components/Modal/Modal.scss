@@ -1,34 +1,96 @@
+@use "../../styles/variables" as v;
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(6, 20, 48, 0.9);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .modal-content {
-  background: white;
+  background: v.$purple-light;
+  border-radius: 10px;
+  border: 1px solid v.$purple-dark;
+  width: 100%;
+  max-width: 550px;
+
+  height: fit-content;
+  position: relative;
   padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  max-height: 80vh;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    color: v.$purple-dark;
+    font-size: v.$medium-font-size;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      background: v.$purple-dark;
+      color: v.$purple-light;
+    }
+  }
 
   .modal-image {
     width: 100%;
-    height: 200px;
-    margin-bottom: 1rem;
+    height: 220px;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 4px;
     }
+  }
+
+  h2 {
+    color: v.$purple-dark;
+    font-size: v.$large-font-size;
+  }
+
+  .rating {
+    color: hsl(59, 100%, 66%);
+    font-size: 1.3rem;
+
+    //flex-shrink: 0;
+  }
+
+  .modal-body {
+    flex: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+
+    p {
+      margin: 0;
+      color: v.$purple-dark;
+      font-size: v.$medium-font-size;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: v.$purple-dark transparent;
   }
 }

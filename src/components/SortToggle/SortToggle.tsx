@@ -18,11 +18,12 @@ export function SortToggle({ onSortChange }: SortToggleProps) {
 
   return (
     <>
-      <span>Sort ratings by: </span>
-      <button className={`sort-toggle ${direction}`} onClick={toggleSort}>
-        {direction === "asc" && "Ascending ↥"}
-        {direction === "desc" && "Descending ↧"}
-      </button>
+      <div className="sort-content">
+        <button className={`sort-toggle ${direction}`} onClick={toggleSort}>
+          {direction === "asc" && "Ascending  ▲"}
+          {direction === "desc" && "Descending ▼"}
+        </button>
+      </div>
     </>
   );
 }
