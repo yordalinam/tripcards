@@ -1,4 +1,4 @@
-# How tos tart the project:
+# How to start the project:
 
 # Clone the repo
 * git clone https://github.com/yordalinam/tripcards.git
