@@ -1,12 +1,12 @@
 # Clone the repo
-git clone https://github.com/yordalinam/tripcards.git
-cd trip-explorer
+* git clone https://github.com/yordalinam/tripcards.git
+* cd trip-explorer
 
 # Install dependencies
-npm install
+* npm install
 
 # Run the app
-npm run dev
+* npm run dev
 
 # Features
 * Responsive Grid - Auto-adjusts from 3 columns to 1 (mobile)
