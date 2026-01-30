@@ -8,7 +8,7 @@ npm install
 # Run the app
 npm run dev
 
-✨ Features
+# Features
 ✅ Responsive Grid - Auto-adjusts from 3 columns to 1 (mobile)
 
 ✅ Search - Debounced filtering (500ms)
@@ -22,14 +22,14 @@ npm run dev
 ✅ Loading/Error States 
 
 
-🎨 Design Decisions
+# Design Decisions
 ⏺️Sass @use modules - using variables (v.$purple-main) in every scss component
 ⏺️gap: 1rem - Consistent spacing system across flex/grid layouts
 ⏺️Hover lift effects - transform: translateY(-2px) + shadow
 ⏺️Portal modals - createPortal to #modal putside of the root
 ⏺️Replacement of some of the links to the cards api (the image link) with some of the already existing ones - as 4 or 5 of them gave back error 404 (missing resource)
 
-Tradeoffs: 
+# Tradeoffs: 
 ⏺️There is no footer, routing, navigation - mainly because of the simplicuty of the website.
 ⏺️The lift effects on the cards could get a bit loafy on mobile 
 ⏺️custom scroll bars (using webkit) is generallly not a best practice as not all browser maintain it - in this project, I chose to do this for simplicity
