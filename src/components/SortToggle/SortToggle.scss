@@ -1,0 +1,18 @@
+.sort-toggle {
+  background: hsl(59, 100%, 66%);
+  border: yellow;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &.asc {
+    background: #e3f2fd;
+    border-color: #2196f3;
+  }
+
+  &.desc {
+    background: #fff3e0;
+    border-color: #ff9800;
+  }
+}

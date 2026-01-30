@@ -1,5 +1,4 @@
-import type { Trip } from "../../api/types/type";
-import Star from "../../assets/svg/Star";
+import type { Trip } from "../../../api/types/type";
 
 interface TripModalContentProps {
   trip: Trip;
