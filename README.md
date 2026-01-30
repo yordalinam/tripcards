@@ -1,3 +1,5 @@
+# How tos tart the project:
+
 # Clone the repo
 * git clone https://github.com/yordalinam/tripcards.git
 * cd trip-explorer
@@ -27,6 +29,7 @@
 * gap: 1rem - Consistent spacing system across flex/grid layouts
 * Hover lift effects - transform: translateY(-2px) + shadow
 * Portal modals - createPortal to #modal putside of the root
+* Made responsive
 * Replacement of some of the links to the cards api (the image link) with some of the already existing ones - as 4 or 5 of them gave back error 404 (missing resource)
 
 # Tradeoffs: 
