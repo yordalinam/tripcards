@@ -33,13 +33,13 @@
       "rating": 3
     },
     {
-"id": 5,
-"name": "Mount Rushmore",
-"image": "https://images.unsplash.com/photo-1586974772928-9e4d0efcc9ab",
-"description": "Famous presidential monument carved into granite.",
-"long_description": "Sculpted into the Black Hills of South Dakota, Mount Rushmore features the faces of Washington, Jefferson, Roosevelt, and Lincoln. The monument took 14 years to complete and stands as a tribute to the nation’s founding, growth, and preservation.",
-"rating": 4
-},
+      "id": 5,
+      "name": "Mount Rushmore",
+      "image": "https://images.unsplash.com/photo-1586974772928-9e4d0efcc9ab",
+      "description": "Famous presidential monument carved into granite.",
+      "long_description": "Sculpted into the Black Hills of South Dakota, Mount Rushmore features the faces of Washington, Jefferson, Roosevelt, and Lincoln. The monument took 14 years to complete and stands as a tribute to the nation’s founding, growth, and preservation.",
+      "rating": 4
+    },
     {
       "id": 6,
       "name": "Salvation Mountain",
