@@ -1,0 +1,15 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .stars {
+    display: flex;
+    gap: 2px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
