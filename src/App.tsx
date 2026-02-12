@@ -1,4 +1,4 @@
-import { CardsList } from "./components/CardList/CardList";
+import { CardsList } from "./features/trip/CardList/CardList";
 import { Header } from "./components/Header/Header";
 
 function App() {

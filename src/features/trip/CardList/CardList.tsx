@@ -1,14 +1,14 @@
-import { useTrips } from "../../features/trip/api/useTrip";
+import { useTrips } from "../api/useTrip";
 import { useState } from "react";
-import type { Trip } from "../../api/types/type";
-import { CardsGridContent } from "../../features/trip/CardsGridContent/CardsGridContent";
-import { Modal } from "../Modal/Modal";
-import { CardModalContent } from "../../features/trip/CardModalContent/CardModalContent";
-import useDebounce from "../../hooks/useDebounce";
-import { useFilteredTrips } from "../../hooks/useFiltered";
-import { useSortedTrips } from "../../hooks/useSorted";
-import { FilterInput } from "../FilterInput/FilterInput";
-import { SortToggle } from "../SortToggle/SortToggle";
+import type { Trip } from "../../../api/types/type";
+import { CardsGridContent } from "../CardsGridContent/CardsGridContent";
+import { Modal } from "../../../components/Modal/Modal";
+import { CardModalContent } from "../CardModalContent/CardModalContent";
+import useDebounce from "../../../hooks/useDebounce";
+import { useFilteredTrips } from "../../../hooks/useFiltered";
+import { useSortedTrips } from "../../../hooks/useSorted";
+import { FilterInput } from "../../../components/FilterInput/FilterInput";
+import { SortToggle } from "../../../components/SortToggle/SortToggle";
 import "./CardList.scss";
 
 export function CardsList() {
