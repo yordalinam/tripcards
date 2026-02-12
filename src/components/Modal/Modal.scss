@@ -19,13 +19,17 @@
   border-radius: 10px;
   border: 1px solid v.$purple-dark;
   width: 100%;
-  max-width: 550px;
+  max-width: 35rem;
+  max-height: 35rem;
 
   height: fit-content;
   position: relative;
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: v.$large-font-size;
 
   .close {
     position: absolute;
@@ -49,48 +53,5 @@
       background: v.$purple-dark;
       color: v.$purple-light;
     }
-  }
-
-  .modal-image {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 0.5rem;
-    border-radius: 10px;
-    overflow: hidden;
-    flex-shrink: 0;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  h2 {
-    color: v.$purple-dark;
-    font-size: v.$large-font-size;
-  }
-
-  .rating {
-    color: hsl(59, 100%, 66%);
-    font-size: 1.3rem;
-
-    //flex-shrink: 0;
-  }
-
-  .modal-body {
-    flex: 1;
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-
-    p {
-      margin: 0;
-      color: v.$purple-dark;
-      font-size: v.$medium-font-size;
-    }
-
-    scrollbar-width: thin;
-    scrollbar-color: v.$purple-dark transparent;
   }
 }

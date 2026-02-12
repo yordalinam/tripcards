@@ -1,4 +1,5 @@
 import type { Trip } from "../../../api/types/type";
+import "./CardModalContent.scss";
 
 interface TripModalContentProps {
   trip: Trip;

@@ -12,6 +12,7 @@
   color: v.$purple-light;
   outline: none;
   position: relative;
+  align-self: stretch;
 
   &:hover {
     background: v.$purple-main;

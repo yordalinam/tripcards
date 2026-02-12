@@ -13,7 +13,7 @@ export function Card({ trip, onMoreInfo }: CardProps) {
       <img src={trip.image} alt={trip.name} />
       <div className="card-content">
         <span>{trip.name}</span>
-        <div className="rating">{"★".repeat(Math.floor(trip.rating))}</div>
+        <div className="rating">{"★".repeat(trip.rating)}</div>
         <p>{trip.description}</p>
         <Button onClick={onMoreInfo}>More Info</Button>
       </div>
