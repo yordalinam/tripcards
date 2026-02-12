@@ -6,6 +6,7 @@ import { Modal } from "../Modal/Modal";
 import { CardModalContent } from "../../features/trip/CardModalContent/CardModalContent";
 import useDebounce from "../../hooks/useDebounce";
 import { useFilteredTrips } from "../../hooks/useFiltered";
+import { useSortedTrips } from "../../hooks/useSorted";
 import { CardsGridFilters } from "../../features/trip/CardsGridFilter/CardsGridFilter";
 import "./CardList.scss";
 
@@ -19,6 +20,10 @@ export function CardsList() {
   const filteredTrips = useFilteredTrips({
     trips,
     searchQuery: debouncedSearch,
+  });
+
+  const sortedTrips = useSortedTrips({
+    trips: filteredTrips,
     sortDirection,
   });
 
@@ -32,7 +37,7 @@ export function CardsList() {
   if (isError) {
     return (
       <div className="error-container">
-        <div className="error-icon">⚠️</div>
+        <div className="error-icon">💥</div>
         <div>Error loading trips</div>
       </div>
     );
@@ -44,7 +49,7 @@ export function CardsList() {
         onSearchChange={setSearchCard}
         onSortChange={setSortDirection}
       />
-      <CardsGridContent trips={filteredTrips} onTripSelect={setSelectedTrip} />
+      <CardsGridContent trips={sortedTrips} onTripSelect={setSelectedTrip} />
       {selectedTrip && (
         <Modal isOpen={true} onClose={() => setSelectedTrip(null)}>
           <CardModalContent trip={selectedTrip} />
