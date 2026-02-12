@@ -1,27 +1,24 @@
-import { useState } from "react";
 import "./SortToggle.scss";
 
 type SortDirection = "asc" | "desc";
 
 interface SortToggleProps {
   onSortChange: (direction: SortDirection) => void;
+  sortDirection: SortDirection;
 }
 
-export function SortToggle({ onSortChange }: SortToggleProps) {
-  const [direction, setDirection] = useState<"asc" | "desc">("desc");
-
+export function SortToggle({ onSortChange, sortDirection }: SortToggleProps) {
   const toggleSort = () => {
-    const newDirection = direction === "asc" ? "desc" : "asc";
-    setDirection(newDirection);
+    const newDirection = sortDirection === "asc" ? "desc" : "asc";
     onSortChange(newDirection);
   };
 
   return (
     <>
       <div className="sort-content">
-        <button className={`sort-toggle ${direction}`} onClick={toggleSort}>
-          {direction === "asc" && "Ascending  ▲"}
-          {direction === "desc" && "Descending ▼"}
+        <button className={`sort-toggle ${sortDirection}`} onClick={toggleSort}>
+          {sortDirection === "asc" && "Ascending  ▲"}
+          {sortDirection === "desc" && "Descending ▼"}
         </button>
       </div>
     </>

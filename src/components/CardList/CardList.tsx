@@ -7,7 +7,8 @@ import { CardModalContent } from "../../features/trip/CardModalContent/CardModal
 import useDebounce from "../../hooks/useDebounce";
 import { useFilteredTrips } from "../../hooks/useFiltered";
 import { useSortedTrips } from "../../hooks/useSorted";
-import { CardsGridFilters } from "../../features/trip/CardsGridFilter/CardsGridFilter";
+import { FilterInput } from "../FilterInput/FilterInput";
+import { SortToggle } from "../SortToggle/SortToggle";
 import "./CardList.scss";
 
 export function CardsList() {
@@ -45,10 +46,13 @@ export function CardsList() {
 
   return (
     <>
-      <CardsGridFilters
-        onSearchChange={setSearchCard}
-        onSortChange={setSortDirection}
-      />
+      <div className="sort-filter-container">
+        <FilterInput onFilterChange={setSearchCard} searchCard={searchCard} />
+        <SortToggle
+          onSortChange={setSortDirection}
+          sortDirection={sortDirection}
+        />
+      </div>
       <CardsGridContent trips={sortedTrips} onTripSelect={setSelectedTrip} />
       {selectedTrip && (
         <Modal isOpen={true} onClose={() => setSelectedTrip(null)}>

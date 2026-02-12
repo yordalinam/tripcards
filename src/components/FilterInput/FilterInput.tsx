@@ -1,21 +1,16 @@
-import { useState } from "react";
 import "./FilterInput.scss";
 
 interface FilterInputProps {
-  onFilterChange: (searchTerm: string) => void;
+  onFilterChange: (searchCard: string) => void;
+  searchCard: string;
 }
 
-export function FilterInput({ onFilterChange }: FilterInputProps) {
-  const [searchTerm, setSearchTerm] = useState("");
-
+export function FilterInput({ onFilterChange, searchCard }: FilterInputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchTerm(value);
-    onFilterChange(value);
+    onFilterChange(e.target.value);
   };
 
   const handleClear = () => {
-    setSearchTerm("");
     onFilterChange("");
   };
 
@@ -25,10 +20,10 @@ export function FilterInput({ onFilterChange }: FilterInputProps) {
         className="input"
         type="text"
         placeholder="Search trips..."
-        value={searchTerm}
+        value={searchCard}
         onChange={handleChange}
       />
-      {searchTerm && (
+      {searchCard && (
         <button className="clear-btn" onClick={handleClear}>
           ×
         </button>
