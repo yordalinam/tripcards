@@ -11,10 +11,8 @@ export const useFilteredTrips = ({
   searchQuery,
 }: UseFilteredTripsProps) => {
   return useMemo(() => {
-    const result = trips.filter((trip) =>
+    return trips.filter((trip) =>
       trip.name.toLowerCase().includes(searchQuery.toLowerCase()) || trip.description.toLowerCase().includes(searchQuery.toLowerCase())
-
     );
-    return result;
   }, [trips, searchQuery]);
 };

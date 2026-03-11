@@ -17,8 +17,9 @@ export function SortToggle({ onSortChange, sortDirection }: SortToggleProps) {
     <>
       <div className="sort-content">
         <button className={`sort-toggle ${sortDirection}`} onClick={toggleSort}>
-          {sortDirection === "asc" && "Ascending  ▲"}
-          {sortDirection === "desc" && "Descending ▼"}
+          {sortDirection === "asc" && "Titles Ascending 👆🏻"}
+
+          {sortDirection === "desc" && "Titles Descending 👇🏻"}
         </button>
       </div>
     </>
